@@ -1,0 +1,1044 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta name="robots" content="all"/>
+<meta name="robots" content="index,follow"> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="제이펍의 참 똑똑한 2비트 책 이야기" href="http://jpub.tistory.com/rss" />
+<link rel="stylesheet" media="screen" type="text/css" href="//s1.daumcdn.net/cfs.tistory/custom/blog/36/361051/skin/style.css?_T_=1394180529" />
+<link rel="stylesheet" media="print" type="text/css" href="//s1.daumcdn.net/cfs.tistory/custom/blog/36/361051/skin/images/print.css" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>제이펍의 참 똑똑한 2비트 책 이야기 :: 스프링 인 액션(제4판)</title>
+<link rel="stylesheet" type="text/css" href="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/plugins/A_ShareEntryWithSNS/css/shareEntryWithSNS.css"/>
+<script type="text/javascript" src="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/plugins/A_ShareEntryWithSNS/script/shareEntryWithSNS.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/plugins/CommentCaptcha/css/captcha.css"/>
+		<script type="text/javascript">
+			var needCommentCaptcha = true;
+			var commentCaptchaType = 'bottom';
+		</script>
+<style type="text/css">
+		#daumSearchBox {
+			height: 21px;
+			background-image : url(http://i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bg_search2_2.gif);
+			margin: 5px auto ;
+			padding: 0;
+		}
+		#daumSearchBox input {
+			background: none;
+			margin : 0;
+			padding : 0;
+			border : 0;
+		}
+		#daumSearchBox #daumLogo {
+			width: 34px;
+			height: 21px;
+			float: left;
+			margin-right: 5px;
+			background-image : url(http://i1.daumcdn.net/img-media/tistory/img/bg_search1_2_2010ci.gif);
+		}
+		#daumSearchBox #show_q {
+			background-color: transparent;
+			border: none;
+			font: 12px Gulim, Sans-serif;
+			color: #555;
+			margin-top: 4px;
+			margin-right: 15px;
+			float: left;
+		}
+
+		#daumSearchBox #show_btn {
+			background-image : url(http://i1.daumcdn.net/imgsrc.search/search_all/show/tistory/plugin/bt_search_2.gif);
+			width: 37px;
+			height: 21px;
+			float: left;
+			margin:0;
+			cursor:pointer;
+			text-indent:-1000em;
+		}
+	</style><link rel="stylesheet" href="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/plugins/lightbox/assets/css/lightbox.min.css" />
+<link rel="stylesheet" type="text/css" href="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/plugins/TistoryProfileLayer/style.css" />
+<script type="text/javascript" src="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/plugins/TistoryProfileLayer/profile.js"></script>
+	<style type="text/css">
+		.another_category { border: 1px solid #E5E5E5; padding: 10px 10px 5px; margin:10px 0; clear: both; }
+		.another_category h4 { font-size: 12px !important; margin: 0 !important; border-bottom: 1px solid #E5E5E5 !important; padding: 2px 0 6px !important; }
+		.another_category h4 a { font-weight: bold !important; }
+		.another_category table { table-layout: fixed; border-collapse: collapse; width: 100% !important; margin-top: 10px !important; }
+		* html .another_category table { width: auto !important; }
+		*:first-child+html .another_category table { width: auto !important; }
+		.another_category th, .another_category td { padding: 0 0 4px !important; }
+		.another_category th { text-align: left; font-size: 12px !important; font-weight: normal;  word-break: break-all; overflow: hidden; line-height: 1.5; }
+		.another_category td { text-align: right; width: 80px; font-size: 11px; }
+		.another_category th a { font-weight: normal; text-decoration: none; border: none !important; }
+		.another_category th a.current{ font-weight: bold; text-decoration: none !important; border-bottom: 1px solid !important; }
+		.another_category th span { font-weight: normal; text-decoration: none; font: 10px Tahoma, Sans-serif; border: none !important; }
+
+		.another_category_color_gray, .another_category_color_gray h4 { border-color: #E5E5E5 !important; }
+		.another_category_color_gray * { color: #909090 !important; }
+		.another_category_color_gray th a.current{border-color:#909090 !important;}
+		.another_category_color_gray h4, .another_category_color_gray h4 a { color: #737373 !important; }
+
+
+		.another_category_color_red, .another_category_color_red h4 { border-color: #F6D4D3 !important;  }
+		.another_category_color_red * { color: #E86869 !important; }
+		.another_category_color_red th a.current{border-color:#E86869 !important;}
+		.another_category_color_red h4, .another_category_color_red h4 a { color: #ED0908 !important; }
+
+
+		.another_category_color_green, .another_category_color_green h4 { border-color: #CCE7C8 !important; }
+		.another_category_color_green * { color: #64C05B !important; }
+		.another_category_color_green th a.current{border-color:#64C05B !important;}
+		.another_category_color_green h4, .another_category_color_green h4 a { color: #3EA731 !important; }
+
+
+		.another_category_color_blue, .another_category_color_blue h4 { border-color: #C8DAF2 !important; }
+		.another_category_color_blue * { color: #477FD6 !important; }
+		.another_category_color_blue th a.current{border-color:#477FD6 !important;}
+		.another_category_color_blue h4, .another_category_color_blue h4 a { color: #1960CA !important; }
+
+
+		.another_category_color_violet, .another_category_color_violet h4 { border-color: #E1CEEC !important;  }
+		.another_category_color_violet * { color:#9D64C5 !important; }
+		.another_category_color_violet th a.current{border-color:#9D64C5 !important;}
+		.another_category_color_violet h4, .another_category_color_violet h4 a { color: #7E2CB5 !important; }
+	</style>
+<script type="text/javascript">
+//<![CDATA[
+var servicePath = "";
+var blogURL = "";
+//]]>
+</script>
+<script type="text/javascript" src="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/script/_/base.js"></script>
+<link rel="stylesheet" type="text/css" href="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/style/dialog.css"/>
+<link rel="stylesheet" type="text/css" href="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/style/menubar.css"/><style type="text/css">.tt_article_useless_p_margin p {padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important;}</style><meta name="referrer" content="always"><link rel="shortcut icon" href="http://tistory2.daumcdn.net/tistory/361051/favicon.ico"/><meta name="description" content="아마존 No.1 스프링 서적! 100,000명이 넘는 개발자가 이 책을 통해 스프링에 눈떴다! 출판사 제이펍 원출판사 Manning 원서명 Spring in Action(4th edition)(ISBN: 9781617291203) 저자명 크레이그 월즈 역자명 테크 트랜스 그룹 T4 출판일 2015년 12월 29일 페이지 752쪽 시리즈 (없음) 판 형 (188*245*34) 제 본 무선(soft cover) 정 가 35,000원 ISBN 979-11-85890-38-8 (93000) 키워드 spring, 자바, 와이어링, 애스펙트..">
+
+<!-- BEGIN OPENGRAPH -->
+<link rel="canonical" href="http://jpub.tistory.com/539" /><meta property="og:type" content="article"><meta property="og:url" content="http://jpub.tistory.com/539" ><meta property="og:site_name" content="제이펍의 참 똑똑한 2비트 책 이야기" ><meta property="og:title" content="스프링 인 액션(제4판)" ><meta name="by" content="제이펍" ><meta property="og:description" content="아마존 No.1 스프링 서적! 100,000명이 넘는 개발자가 이 책을 통해 스프링에 눈떴다! 출판사 제이펍 원출판사 Manning 원서명 Spring in Action(4th edition)(ISBN: 9781617291203) 저자명 크레이그 월즈 역자명 테크 트랜스 그룹 T4 출판일 2015년 12월 29일 페이지 752쪽 시리즈 (없음) 판 형 (188*245*34) 제 본 무선(soft cover) 정 가 35,000원 ISBN 979-11-85890-38-8 (93000) 키워드 spring, 자바, 와이어링, 애스펙트.." ><meta property="og:image" content="http://cfile22.uf.tistory.com/image/240AA64A5684D93E1E342C" ><meta property="article:section" content="IT 인터넷" >
+<!-- END OPENGRAPH -->
+
+
+
+<!-- BEGIN TWITTERCARD -->
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TISTORY"><meta name="twitter:title" content="스프링 인 액션(제4판)" ><meta name="twitter:description" content="아마존 No.1 스프링 서적! 100,000명이 넘는 개발자가 이 책을 통해 스프링에 눈떴다! 출판사 제이펍 원출판사 Manning 원서명 Spring in Action(4th edition)(ISBN: 9781617291203) 저자명 크레이그 월즈 역자명 테크 트랜스 그룹 T4 출판일 2015년 12월 29일 페이지 752쪽 시리즈 (없음) 판 형 (188*245*34) 제 본 무선(soft cover) 정 가 35,000원 ISBN 979-11-85890-38-8 (93000) 키워드 spring, 자바, 와이어링, 애스펙트.." ><meta property="twitter:image" content="http://cfile22.uf.tistory.com/image/240AA64A5684D93E1E342C" >
+<!-- END TWITTERCARD -->
+
+
+
+<!-- BEGIN DAUMAPP -->
+<meta property="dg:plink" content="http://jpub.tistory.com/539" ><meta name="plink" content="http://jpub.tistory.com/539" ><meta name="title" content="스프링 인 액션(제4판)" ><meta name="article:media_name" content="제이펍의 참 똑똑한 2비트 책 이야기" ><meta property="article:mobile_url" content="http://jpub.tistory.com/m/539" ><meta property="article:pc_url" content="http://jpub.tistory.com/539" ><meta property="article:mobile_view_url" content="http://jpub.tistory.com/m/539" ><meta property="article:pc_view_url" content="http://jpub.tistory.com/539" ><meta property="article:pc_service_home" content="http://www.tistory.com" ><meta property="article:mobile_service_home" content="http://www.tistory.com/m" ><meta property="article:txid" content="361051_539" /><meta property="article:published_time" content="2015-12-31T16:53:14+09:00" ><meta property="og:regDate" content="20151231165314" ><meta property="article:modified_time" content="2016-02-04T11:33:19+09:00" >
+<!-- END DAUMAPP -->
+
+
+
+<!-- BEGIN STRUCTURED_DATA -->
+<script type="application/ld+json">{"@context":"http://schema.org", "@type":"BlogPosting","mainEntityOfPage":{"@id": "http://jpub.tistory.com/539"},"url":"http://jpub.tistory.com/539","headline":"스프링 인 액션(제4판)","description":"아마존 No.1 스프링 서적! 100,000명이 넘는 개발자가 이 책을 통해 스프링에 눈떴다! 출판사 제이펍 원출판사 Manning 원서명 Spring in Action(4th edition)(ISBN: 9781617291203) 저자명 크레이그 월즈 역자명 테크 트랜스 그룹 T4 출판일 2015년 12월 29일 페이지 752쪽 시리즈 (없음) 판 형 (188*245*34) 제 본 무선(soft cover) 정 가 35,000원 ISBN 979-11-85890-38-8 (93000) 키워드 spring, 자바, 와이어링, 애스펙트..","author":{"@type":"Person","name":"제이펍"},"image":{"@type":"ImageObject","url":"http://cfile22.uf.tistory.com/image/240AA64A5684D93E1E342C","width":"800px","height":"800px"},"datePublished":"20151231T16:53:14+09:00","dateModified":"20160204T11:33:19+09:00","publisher":{"@type":"Organization","name":"TISTORY","logo":{"@type":"ImageObject","url":"https://t1.daumcdn.net/cssjs/icon/557567EA016E200001","width":"800px","height":"800px"}}}</script>
+<!-- END STRUCTURED_DATA -->
+
+<link rel="apple-touch-icon" href="//i1.daumcdn.net/thumb/C180x180/?fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F125F8E304C4EA16822208B">
+<link rel="apple-touch-icon" sizes="76x76" href="//i1.daumcdn.net/thumb/C76x76/?fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F125F8E304C4EA16822208B">
+<link rel="apple-touch-icon" sizes="120x120" href="//i1.daumcdn.net/thumb/C120x120/?fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F125F8E304C4EA16822208B">
+<link rel="apple-touch-icon" sizes="152x152" href="//i1.daumcdn.net/thumb/C152x152/?fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F125F8E304C4EA16822208B"></head>
+<body id="tt-body-page">
+<script src="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/plugins/RainbowLink/rainbow.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+	T.config = {"TOP_SSL_URL":"https:\/\/www.tistory.com","PREVIEW":false,"ROLE":"guest","PREV_PAGE":"\/540","NEXT_PAGE":"\/538","BLOG":{"isDormancy":false,"title":"\uc81c\uc774\ud38d\uc758 \ucc38 \ub611\ub611\ud55c 2\ube44\ud2b8 \ucc45 \uc774\uc57c\uae30"},"NEED_COMMENT_LOGIN":false,"COMMENT_LOGIN_CONFIRM_MESSAGE":"","LOGIN_URL":"https:\/\/www.tistory.com\/auth\/login\/?redirectUrl=http%3A%2F%2Fjpub.tistory.com%2F539","DEFAULT_URL":"http:\/\/jpub.tistory.com","USER":{"name":null,"homepage":null}};
+</script>
+
+<script type="text/javascript" src="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/script/blog/common.js"></script>
+<div style="margin:0; padding:0; border:none; background:none; float:none; clear:none; z-index:0"></div>
+
+
+<div id="header">
+	<!-- 블로그메뉴 -->
+	<div id="blogMenu">
+		<ul>
+			<!-- 블로그 사용 환경 (설치형/티스토리)에 맞게 아래 주석으로 처리된 메뉴를 활성화 시키시기 바랍니다. -->
+			<li class="tab_blog"><a href="/" title="Home">Home</a></li>
+			<li class="tab_taglog"><a href="/tag" title="Tag">Tag</a></li>
+			<li class="tab_media"><a href="/media" title="">Media Log</a></li>
+			<li class="tab_localog"><a href="/location" title="">Location Log</a></li>
+			<!-- <li class="tab_key"><a href="/keylog" title="KeyLog">Key Log</a></li> -->
+			<li class="tab_guestbook"><a href="/guestbook" title="">Guestbook</a></li>
+			<li class="tab_admin"><a href="/admin" title="Admin">Admin</a></li>
+			<li class="tab_write"><a href="/admin/entry/post" title="Write">Write</a></li>
+		</ul>
+	</div><!-- close blogMenu -->
+</div>
+<!-- close header -->
+<hr />
+<div class="wrapper-main floatWrapper">
+	<div id="content"><div class="inner"></div>
+		<div class="wrapper-content">
+			<div class="wrapper-title floatWrapper">
+				<!-- 블로그제목 -->
+				<h1><a href="/">제이펍의 참 똑똑한 2비트 책 이야기</a></h1>
+			</div><!-- close wrapper-title -->
+	<!-- 태그 -->
+			
+	<!-- 키워드 -->
+			
+	<!-- 지역로그 -->
+			
+
+			
+	<!-- 본문검색리스트 -->
+			
+	<!-- 댓글검색리스트 -->
+			
+	<!-- 공지사항글 -->
+			
+	<!-- 보호글 -->
+			
+	<!-- 포스트의 본문 시작 -->
+			
+				<div class="entry">
+					<div class="titleWrap">
+						<span class="info">
+							<span class="category"><a href="/category/%EC%A0%9C%EC%9D%B4%ED%8E%8D%EC%9D%98%20%EB%8F%84%EC%84%9C">제이펍의 도서</a></span>
+							|
+							<span class="author">Posted by <b>제이펍</b></span>
+						</span><!-- close span -->
+						<span class="date">2015.12.31 16:53</span>
+						<h2><a href="/539">스프링 인 액션(제4판)</a></h2>
+					</div><!-- close titleWrap -->
+	<!-- 포스트관리 -->
+					
+
+	<!-- 포스트 본문 내용 -->
+					<div class="article" style=:font:11pt/150% nanum;">
+						<div class="tt_article_useless_p_margin"><p><br /></p><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:500px;width: 500px; height: 501px;;height:auto;max-width:100%"><span data-url="http://cfile22.uf.tistory.com/attach/240AA64A5684D93E1E342C" data-lightbox="lightbox"><img src="http://cfile22.uf.tistory.com/image/240AA64A5684D93E1E342C" style="cursor: pointer;max-width:100%;height:auto" width="500" height="501" filename="스프링인액션(제4판)RGB.png" filemime="image/jpeg" style="width: 500px; height: 501px;" /></span></span></p><p><br /></p><p><span style="line-height: 1.5;"><b>아마존 No.1 스프링 서적!</b></span></p><p><b>100,000명이 넘는 개발자가 이 책을 통해 스프링에 눈떴다!</b></p><p><br /></p><p><b><span style="color: rgb(71, 102, 0);">출판사</span></b>&nbsp;<span style="line-height: 1.5;">제이펍</span></p><p><b><span style="color: rgb(71, 102, 0);">원출판사</span></b>&nbsp;<span style="line-height: 1.5;">Manning</span></p><p><b><span style="color: rgb(71, 102, 0);">원서명</span></b>&nbsp;<span style="line-height: 1.5;">Spring in Action(4th edition)(ISBN: 9781617291203)</span></p><p><b><span style="color: rgb(71, 102, 0);">저자명</span></b>&nbsp;<span style="line-height: 1.5;">크레이그 월즈</span></p><p><b><span style="color: rgb(71, 102, 0);">역자명</span></b>&nbsp;<span style="line-height: 1.5;">테크 트랜스 그룹 T4</span></p><p><b><span style="color: rgb(71, 102, 0);">출판일</span></b>&nbsp;<span style="line-height: 1.5;">2015년 12월 29일</span></p><p><b><span style="color: rgb(71, 102, 0);">페이지</span></b>&nbsp;<span style="line-height: 1.5;">752쪽</span></p><p><b><span style="color: rgb(71, 102, 0);">시리즈</span></b>&nbsp;<span style="line-height: 1.5;">(없음)</span></p><p><b><span style="color: rgb(71, 102, 0);">판 &nbsp;형</span></b>&nbsp;<span style="line-height: 1.5;">(188*245*34)</span></p><p><b><span style="color: rgb(71, 102, 0);">제 &nbsp;본</span></b>&nbsp;<span style="line-height: 1.5;">무선(soft cover)</span></p><p><b><span style="color: rgb(71, 102, 0);">정 &nbsp;가</span></b>&nbsp;<span style="line-height: 1.5;">35,000원</span></p><p><b><span style="color: rgb(71, 102, 0);">ISBN</span></b>&nbsp;<span style="line-height: 1.5;">979-11-85890-38-8 (93000)</span></p><p><b><span style="color: rgb(71, 102, 0);">키워드</span></b>&nbsp;<span style="line-height: 1.5;">spring, 자바, 와이어링, 애스펙트 지향, 스프링 MVC, 웹 플로, 스프링 시큐리티, NoSQL, 애너테이션, Restful</span></p><p><b><span style="color: rgb(71, 102, 0);">분야</span></b>&nbsp;<span style="line-height: 1.5;">웹 프로그래밍 / 프레임워크</span></p><p><span style="line-height: 1.5;"><br /></span></p><p><b><span style="color: rgb(71, 102, 0);">관련 사이트</span></b></p><p>■ <a href="http://www.amazon.com/Spring-Action-Craig-Walls/dp/161729120X" target="_blank" class="tx-link">아마존 도서소개 페이지</a></p><p>■ <a href="https://www.manning.com/books/spring-in-action-fourth-edition" target="_blank" class="tx-link">원출판사 도서소개 페이지</a></p><p><br /></p><p><b><span style="color: rgb(71, 102, 0);">관련 포스트</span></b></p><p>■&nbsp;<a href="http://jpub.tistory.com/534" target="_blank" style="line-height: 1.5;">2015/12/16 - [출간전 책소식] - 《스프링 인 액션》이 4판으로 돌아왔습니다!</a></p><p></p><p><b><span style="color: rgb(71, 102, 0);"><br /></span></b></p><p><b><span style="color: rgb(71, 102, 0);">관련 시리즈</span></b></p><p>■ (없음)</p><p><br /></p><p><b><span style="color: rgb(71, 102, 0);">관련 도서</span></b></p><p>■ <a href="http://jpub.tistory.com/196" target="_blank" class="tx-link">스프링 인 액션(제3판)</a></p><p><br /></p><p><b><span style="color: rgb(71, 102, 0);">관련 파일 다운로드</span></b></p><p>■ <a href="https://github.com/Jpub/SpringInAction" target="_blank" class="tx-link">예제 코드</a></p><p><br /></p><p><b><span style="color: rgb(71, 102, 0);">교재 검토용 증정 안내</span></b></p><p>■ 학교 및 학원에서 교재 선정을 위해 책을 파일로 검토해보고자 하시는 분들은 다음의 페이지에서 신청 양식을 작성해주시기 바랍니다. 확인 후 연락을 드리도록 하겠습니다. <a href="http://goo.gl/vBtPo3" target="_blank" class="tx-link">http://goo.gl/vBtPo3</a></p><p><br /></p><p><b><span style="color: rgb(71, 102, 0);">강의 자료</span></b></p><p>(교재로 채택하신 분들은 출판사로 메일을 보내주세요) =&gt; jeipubmarketer@gmail.com</p><p>■ 예제 소스</p><p>■ 본문의 그림과 표</p><p><br /></p><p><b><span style="color: rgb(71, 102, 0);">샘플 PDF</span></b></p><p>■ 차례, 옮긴이 머리말, 머리말, 감사의 글, 이 책에 대하여, 베타리더 후기, 1장 '스프링 속으로', 2장 '빈 와이어링' 일부</p><p><span class="imageblock" style="display:inline-block;;height:auto;max-width:100%"><a href="http://jpub.tistory.com/attachment/cfile27.uf@2139013C5684DBFC14DDD2.pdf"><img src="//i1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/image/extension/pdf.gif" alt="" style="vertical-align: middle;" /> 스프링인액션(제4판)_sample.pdf</a></span></p><p></p><p><b><span style="color: rgb(71, 102, 0);"><br /></span></b></p><p><b><span style="color: rgb(71, 102, 0);">정오표 페이지</span></b></p><p>■ <a href="http://jpub.tistory.com/549" target="_blank" class="tx-link">http://jpub.tistory.com/549</a></p><p>&nbsp;</p><p></p><p><b><span style="color: rgb(71, 102, 0);">도서구매 사이트</span></b>(가나다순)</p><div class="txc-textbox" style="border: 1px solid rgb(71, 102, 0); padding: 10px; background-color: rgb(255, 255, 255);"><p><span style="line-height: 1.5; color: rgb(124, 124, 114); font-family: dotum, sans-serif;">[</span><a href="http://www.kangcom.com/sub/view.asp?topid=1&amp;sku=201512162185" target="_blank" class="tx-link" style="line-height: 1.5; margin: 0px; padding: 0px; border: none; font-family: dotum, sans-serif; text-decoration: underline; color: rgb(162, 195, 73);">강컴</a><span style="line-height: 1.5; color: rgb(124, 124, 114); font-family: dotum, sans-serif;">] &nbsp; [</span><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791185890388&amp;orderClick=LAH&amp;Kc=" target="_blank" class="tx-link" style="line-height: 1.5; margin: 0px; padding: 0px; border: none; font-family: dotum, sans-serif; text-decoration: underline; color: rgb(162, 195, 73);">교보문고</a><span style="line-height: 1.5; color: rgb(124, 124, 114); font-family: dotum, sans-serif;">] &nbsp; [</span><a href="http://books.11st.co.kr/product/SellerProductDetail.tmall?method=getSellerProductDetail&amp;prdNo=1413234568&amp;trTypeCd=9p&amp;trCtgrNo=63517" target="_blank" class="tx-link" style="line-height: 1.5; margin: 0px; padding: 0px; border: none; font-family: dotum, sans-serif; text-decoration: underline; color: rgb(162, 195, 73);">도서11번가</a><span style="line-height: 1.5; color: rgb(124, 124, 114); font-family: dotum, sans-serif;">] &nbsp; [</span><a href="http://www.bandinlunis.com/front/product/detailProduct.do?prodId=3908601" target="_blank" class="tx-link" style="line-height: 1.5; margin: 0px; padding: 0px; border: none; font-family: dotum, sans-serif; text-decoration: underline; color: rgb(162, 195, 73);">반디앤루니스</a><span style="line-height: 1.5; color: rgb(124, 124, 114); font-family: dotum, sans-serif;">] &nbsp; [</span><a href="http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=72103638" target="_blank" class="tx-link" style="line-height: 1.5; margin: 0px; padding: 0px; border: none; font-family: dotum, sans-serif; text-decoration: underline; color: rgb(162, 195, 73);">알라딘</a><span style="line-height: 1.5; color: rgb(124, 124, 114); font-family: dotum, sans-serif;">] &nbsp; [</span><a href="http://www.yes24.com/24/goods/23542303?scode=032&amp;OzSrank=1" target="_blank" class="tx-link" style="line-height: 1.5; margin: 0px; padding: 0px; border: none; font-family: dotum, sans-serif; text-decoration: underline; color: rgb(162, 195, 73);">예스이십사</a><span style="line-height: 1.5; color: rgb(124, 124, 114); font-family: dotum, sans-serif;">] &nbsp; [</span><a href="http://book.interpark.com/product/BookDisplay.do?_method=detail&amp;sc.shopNo=0000400000&amp;sc.prdNo=247837748&amp;sc.saNo=003002001&amp;bid1=search&amp;bid2=product&amp;bid3=title&amp;bid4=001" target="_blank" class="tx-link" style="line-height: 1.5; margin: 0px; padding: 0px; border: none; font-family: dotum, sans-serif; text-decoration: underline; color: rgb(162, 195, 73);">인터파크</a><span style="line-height: 1.5; color: rgb(124, 124, 114); font-family: dotum, sans-serif;">]</span></p></div><p><br /></p><p><b><span style="color: rgb(71, 102, 0);">도서 소개</span></b></p><div><div><b>100,000명이 넘는 개발자가 이 책을 통해 스프링에 눈떴다!</b></div><div><b>아마존 No.1 스프링 서적!</b></div><div><br /></div><div>J2EE 개발을 좀 더 경량화시키기 위해서 2003년에 디자인된 스프링 프레임워크는 엔터프라이즈 애플리케이션을 개발하기 위한 표준으로 자리매김했다. 최신 버전인 스프링 4에서는 IoC 컨테이너를 위한 새 애너테이션, 스프링 표현식의 향상 내용, REST를 위한 추가 지원 같은 주요 업그레이드와 함께 자바 8 인티그레이션 전체를 지원한다. 스프링에 입문하려는 분이나 새로 도입된 내용을 자세히 알고 싶은 분들 모두에게 최적의 스프링 책이 될 것이다.</div><div><br /></div><div>《스프링 인 액션(제4판)》은 스프링 프레임워크에 대한 완벽 가이드다. 최근에 업데이트된 스프링 MVC를 포함하여 스프링 코어, 보안, 웹 플로 등에 관한 내용까지 모두 다룬다. 또한, 간단한 코드와 예제를 통해서 효과적인 JEE 애플리케이션 개발 방법을 제공한다. 저자 크레이그 월즈는 독자들이 필요로 하는 기술을 재미있는 예제를 통해 쉽게 알려 주는 특별한 재능을 가졌다.</div><div><br /></div><div>이 책의 주요 내용과 특징은 다음과 같다.</div><div><br /></div><div>■ 스프링 4에 맞춘 전면 업데이트</div><div>■ NoSQL을 위한 스프링 데이터</div><div>■ 애너테이션과 정의 프로파일을 사용한 간단한 설정</div><div>■ RESTful 리소스 사용하기</div><div><br /></div><div><b><span style="color: rgb(71, 102, 0);">추천사</span></b></div><div>“업데이트되고 수정된, 스프링에 관한 최고의 책이다!”</div><div>– <b>Gregor Zurowski</b>, Sotherby’s</div><div><br /></div><div>“클래식하면서도 새로움이 있는, 매력으로 가득한 책이다!”</div><div>–<b> Mario Arias</b>, Cake Solutions Ltd</div><div><br /></div><div>“유용하고, 정확하며, 통찰력이 있다!”</div><div>– <b>Jeelani Shaik</b>, D3Banking.com</div><div><br /></div><div>“10년 후에도 이 책은 스프링 플랫폼의 코어 개념에 관한 가장 명확하고 이해하기 쉬운 길잡이가 될 것이다.”</div><div>– <b>James Wright</b>, Sword-Apak,&nbsp;</div><div><br /></div><div><b><span style="color: rgb(71, 102, 0);">지은이 소개</span></b></div><div><b>크레이그 월즈(Craig Walls)</b></div><div>스프링 소셜과 스프링 싱크 프로젝트를 이끄는 Pivotal의 시니어 엔지니어이다. 스프링 프레임워크의 열렬한 지지자이자 프로모터로서 지역 사용자 그룹과 콘퍼런스에서 강연하고, 블로그에 스프링에 관한 글을 쓰면서 바쁜 나날을 보내고 있다. 코딩을 하지 않을 때는 아내와 두 딸, 두 마리의 새, 두 마리의 강아지와 함께 지낸다.</div><div><br /></div><div><b><span style="color: rgb(71, 102, 0);">옮긴이 소개</span></b></div><div><b>테크 트랜스 그룹 T4</b></div><div>엔터프라이즈 환경에서 오픈 소스를 활용한 프레임워크를 구축하는 일에 관심이 많으며, 최근에는 모바일을 접목한 하이브리드 환경에서 사용자 인터페이스와 사용자 경험 UI/UX, HTML5, Spring, NoSQL, Node.js, AngularJS 등 아키텍처 전반에 걸친 웹 기술과 빅 데이터, 인지컴퓨팅 기술을 적용하는 일에 집중하고 있다. 아두이노와 라즈베리파이 등의 다양한 오픈 하드웨어 디바이스를 사용한 사물인터넷 관련 서비스도 제공하고 있다.</div><div>HTML5와 CSS3, 자바스크립트 프로그래밍, Node.js, AngularJS, MySQL, MongoDB와 관련된 다수의 서적을 번역하였으며, 웹과 데이터베이스 관련 기술을 전파하기 위해 애쓰고 있다.</div><div><br /></div><div><b><span style="color: rgb(71, 102, 0);">차례</span></b></div><div><b>PART 1 코어 스프링</b></div><div><b>CHAPTER 1 스프링 속으로 3</b></div><div>1.1 자바 개발 간소화 4</div><div>1.2 빈을 담는 그릇, 컨테이너 21</div><div>1.3 스프링 현황 25</div><div>1.4 스프링의 새로운 기능 33</div><div>1.5 요약 37</div><p id="more539_0" class="moreless_fold"><span style="cursor: pointer;" onclick="toggleMoreLess(this, '539_0','더보기','접기'); return false;">더보기</span></p><div id="content539_0" class="moreless_content" style="display: none;"><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 2 빈 와이어링(묶기) 39</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">2.1 스프링 설정 옵션 알아보기 40</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">2.2 자동으로 빈 와이어링하기 41</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">2.3 자바로 빈 와이어링하기 52</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">2.4 빈을 XML로 와이어링하기 57</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">2.5 설정 가져오기와 믹싱하기 73</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">2.6 요약 77</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b><br /></b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 3 고급 와이어링 79</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">3.1 환경과 프로파일 79</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">3.2 조건부 빈 88</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">3.3 오토와이어링의 모호성 92</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">3.4 빈 범위 100</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">3.5 런타임 값 주입 104</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">3.6 요약 118</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b><br /></b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 4 애스펙트 지향 스프링 121</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">4.1 AOP란 무엇인가? 123</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">4.2 포인트커트를 이용한 조인 포인트 선택 129</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">4.3 애스펙트 애너테이션 만들기 132</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">4.4 XML에서 애스펙트 선언하기 145</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">4.5 AspectJ 애스펙트 주입 155</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">4.6 요약 158</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>PART 2 웹에서의 스프링</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 5 스프링 웹 애플리케이션 만들기 161</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">5.1 스프링 MVC 시작하기 162</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">5.2 간단한 컨트롤러 작성하기 170</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">5.3 요청 입력받기 182</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">5.4 폼 처리하기 188</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">5.5 요약 198</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 6 웹 뷰 렌더링 199</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">6.1 뷰 리졸루션 이해하기 199</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">6.2 JSP 뷰 만들기 202</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">6.3 아파치 타일즈 뷰로 레이아웃 정의하기 221</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">6.4 Thymeleaf로 작업하기 228</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">6.5 요약 235</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 7 고급 스프링 MVC 237</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">7.1 다양한 스프링 MVC 설정 238</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">7.2 멀티파트 폼 데이터 처리하기 244</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">7.3 예외 처리하기 255</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">7.4 어드바이징 컨트롤러 259</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">7.5 리다이렉션되는 요청 간의 데이터 전달하기 261</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">7.6 요약 265</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b><br /></b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 8 스프링 웹 플로로 작업하기 267</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">8.1 스프링에 웹 플로 설정하기 268</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">8.2 플로의 컴포넌트 271</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">8.3 모든 것을 합쳐 보기: 피자 플로 279</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">8.4 웹 플로 보안 295</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">8.5 요약 295</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 9 웹 애플리케이션 보안 297</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">9.1 스프링 시큐리티 시작하기 298</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">9.2 사용자 상세 서비스 선택 304</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">9.3 요청 가로채기 316</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">9.4 사용자 인증하기 324</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">9.5 뷰 보안하기 330</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">9.6 요약 336</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>PART 3 백엔드에서의 스프링</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 10 스프링과 JDBC를 사용하여 데이터베이스 사용하기 339</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">10.1 스프링의 데이터 액세스 철학 340</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">10.2 데이터 소스 설정 348</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">10.3 스프링과 JDBC 357</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">10.4 요약 367</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 11 객체 관계형 매핑을 통한 데이터 퍼시스팅 369</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">11.1 스프링과 하이버네이트 통합 371</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">11.2 스프링과 자바 퍼시스턴스 API 376</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">11.3 스프링 데이터를 사용한 자동 JPA 저장소 386</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">11.4 요약 396</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 12 NoSQL 데이터베이스 사용하기 397</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">12.1 MongoDB의 유지성 도큐먼트 398</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">12.2 Neo4j로 그래프 데이터 사용하기 414</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">12.3 Redis에서 키-값 데이터 사용하기 429</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">12.4 요약 437</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 13 데이터 캐싱하기 439</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">13.1 캐시 지원하기 440</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">13.2 캐싱을 위한 애너테이션 메소드 446</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">13.3 XML에서 캐싱 선언하기 453</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">13.4 요약 457</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 14 시큐리티 메소드 459</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">14.1 애너테이션을 사용한 시큐어 메소드 460</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">14.2 메소드 레벨 시큐리티를 위한 표현식 사용하기 463</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">14.3 요약 472</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>PART 4 스프링 통합</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">CHAPTER 15 원격 서비스 사용하기 477</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">15.1 스프링 리모팅 개요 478</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">15.2 RMI 활용 481</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">15.3 Hessian과 Burlap을 이용한 리모트 서비스 노출 487</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">15.4 스프링의 HttpInvoker 사용하기 494</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">15.5 웹 서비스의 발행과 소비 497</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">15.6 요약 504</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 16 스프링 MVC로 REST API 사용하기 505</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">16.1 휴식(REST)을 취하다 506</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">16.2 첫 번째 REST 엔드포인트 만들기 508</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">16.3 더 많은 리소스 사용하기 524</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">16.4 REST 리소스 사용하기 533</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">16.5 요약 547</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 17 스프링 메시징 549</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">17.1 비동기 메시징에 대한 간단한 소개 550</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">17.2 JMS로 메시지 보내기 556</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">17.3 AMQP를 이용한 메시징 576</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">17.4 요약 588</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 18 WebSocket과 STOMP를 사용하여 메시징하기 589</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">18.1 스프링의 하위 레벨 웹 소켓 API 사용하기 590</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">18.2 웹 소켓 지원 부족에 대해 대응하기 596</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">18.3 STOMP 메시징 작업하기 599</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">18.4 사용자 타깃 메시지 사용하기 613</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">18.5 예외 상황 메시지 처리하기 617</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">18.6 요약 619</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 19 스프링을 사용하여 이메일 전송하기 621</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">19.1 이메일 전송을 위해 스프링 설정하기 622</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">19.2 이메일 메시지를 풍부하게 꾸미기 625</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">19.3 템플릿을 사용하여 이메일 생성하기 629</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">19.4 요약 634</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 20 JMX를 이용한 스프링 빈 관리 635</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">20.1 스프링 빈을 MBean으로 익스포트하기 636</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">20.2 MBean 리모팅 646</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">20.3 통지 처리 651</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">20.4 요약 654</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><b>CHAPTER 21 스프링 부트를 사용한 스프링 개발 간소화 655</b></div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">21.1 스프링 부트 소개 656</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">21.2 스프링 부트로 애플리케이션 만들기 662</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">21.3 스프링 부트 CLI로 그루비 사용하기 677</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">21.4 액추에이터로 애플리케이션 파악하기 684</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">21.5 요약 688</div><div style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br /></div><div><b style="color: rgb(0, 0, 0); line-height: 1.5;">찾아보기 691</b><br /></div></div></div><p><br /></p><div class="daum_like_wrapper"><iframe class="daum_like_button" id="daum_like_button_539" frameborder="0" scrolling="no" allowTransparency="true" src="http://jpub.tistory.com/like/?uid=361051_539&sc=401%2CblogId_361051&url=http%3A%2F%2Fjpub.tistory.com%2F539&published=1451548394" style="width:100%;height:44px;margin:10px auto"></iframe></div><div style="width:100%;margin-top:30px;clear:both;height:30px">		<div class="entry-ccl" style="float:right;margin-top:0;height:0">
+			<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko" target="_blank" style="text-decoration: none">
+				<img id="ccl-icon-539-0" class="entry-ccl-by" src="//i1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/static/admin/editor/ccl_black01.png"
+				     onmouseover="tistoryCcl.show(this, 5)"
+				     onmouseout="tistoryCcl.hide()" alt="저작자 표시" style="width:15px;height:15px"/>
+									<img id="ccl-icon-539-1" class="entry-ccl-nc"
+					     src="//i1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/static/admin/editor/ccl_black02.png"
+					     onmouseover="tistoryCcl.show(this, 5)"
+					     onmouseout="tistoryCcl.hide()" alt="비영리" style="width:15px;height:15px"/>
+												<img id="ccl-icon-539-2" class="entry-ccl-sa"
+							     src="//i1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/static/admin/editor/ccl_black04.png"
+							     onmouseover="tistoryCcl.show(this, 5)"
+							     onmouseout="tistoryCcl.hide()" alt="동일 조건 변경 허락"
+							     style="width:15px;height:15px"/>
+											<!--
+	<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+		<Work rdf:about="">
+			<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/kr/" />
+		</Work>
+		<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/">
+			<permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+			<permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+			<requires rdf:resource="http://web.resource.org/cc/Notice"/>
+			<requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+			<prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/>
+		</License>
+	</rdf:RDF>
+	-->
+			</a>
+		</div>
+					<script type="text/javascript">
+				if (/MSIE [0-6]\./.test(navigator.userAgent)) {
+					for (var i = 0; i <3; i++) {
+						var el = document.getElementById('ccl-icon-539-' + i);
+						el.style.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + el.src + '",sizingMethod="image")';
+						el.src = '//i1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/static/admin/form/s.gif';
+					}
+				}
+			</script>
+			<div style="width:31px;float:left;"><a href="/toolbar/popup/abuseReport/?entryId=539" onclick="window.open(this.href, 'tistoryThisBlogPopup', 'width=550, height=510, toolbar=no, menubar=no, status=no, scrollbars=no'); return false;"><img style="border:0" src="//t1.daumcdn.net/tistory_admin/static/ico/ico_spam_report.png" alt="신고"></a></div></div><div class="tt-plugin tt-share-entry-with-sns tt-sns-icon-alignment-center tt-sns-icon-size-big">
+	<div class="tt-sns-wrap" id="ttSnsWrap-539">
+		<ul class="tt-sns-service-default">
+			<li class="tt-sns-service-kakaostory"><a href="javascript:;" onclick="ShareEntryWithSNS.share('kakaostory', '539', '%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9D%B8%20%EC%95%A1%EC%85%98%28%EC%A0%9C4%ED%8C%90%29');">카카오스토리</a></li>
+			<li class="tt-sns-service-twitter"><a href="javascript:;" onclick="ShareEntryWithSNS.share('twitter', '539', '%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9D%B8%20%EC%95%A1%EC%85%98%28%EC%A0%9C4%ED%8C%90%29');">트위터</a></li>
+			<li class="tt-sns-service-facebook"><a href="javascript:;" onclick="ShareEntryWithSNS.share('facebook', '539', '%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9D%B8%20%EC%95%A1%EC%85%98%28%EC%A0%9C4%ED%8C%90%29');">페이스북</a></li>
+		</ul>
+	</div>
+	<div class="tt-sns-clear"></div>
+</div>
+<div style="text-align:left; padding-top:10px;clear:both">
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://jpub.tistory.com/539&amp;layout=standard&amp;show_faces=true&amp;width=310&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:310px; height:65px;" allowTransparency="true"></iframe>
+</div>
+<fieldset style="margin:20px 0px 20px 0px;padding:5px;"><legend><span><strong>크리에이티브 커먼즈 라이선스</strong></span></legend><!--Creative Commons License--><div style="float: left; width: 88px; margin-top: 3px;"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/kr/" target="_blank"><img alt="Creative Commons License" style="border-width: 0" src="http://i.creativecommons.org/l/by-nc-sa/2.0/kr/88x31.png"/></a></div><div style="margin-left: 92px; margin-top: 3px; text-align: justify;">이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/kr/" target="_blank">크리에이티브 커먼즈 코리아 저작자표시-비영리-동일조건변경허락 2.0 대한민국 라이선스</a>에 따라 이용하실 수 있습니다.
+			<!-- Creative Commons License-->
+			<!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+			<Work rdf:about="">
+			<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/kr/" />
+			</Work>
+			<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/">
+			<permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+			<permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+			<requires rdf:resource="http://web.resource.org/cc/Notice"/>
+			<requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+			<permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+			<requires rdf:resource="http://web.resource.org/cc/ShareAlike"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/></License></rdf:RDF> --></div></fieldset><div class="another_category another_category_color_gray">
+<h4>'<a href="/category/제이펍의%20도서">제이펍의 도서</a>' 카테고리의 다른 글</h4>
+<table>
+<tr>
+<th>
+<a href="http://jpub.tistory.com/545" >사물인터넷을 품은 아두이노: 사물인터넷에 필요한 연결의 모든 것</a>&nbsp;&nbsp;<span>(7)</span>
+</th>
+<td>
+2016.01.25</td>
+</tr>
+<tr>
+<th>
+<a href="http://jpub.tistory.com/540" >전문가를 위한 오라클 PL/SQL 입문(제3판)</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.12.31</td>
+</tr>
+<tr>
+<th>
+<a href="http://jpub.tistory.com/539"  class ="current" >스프링 인 액션(제4판)</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.12.31</td>
+</tr>
+<tr>
+<th>
+<a href="http://jpub.tistory.com/537" >AngularJS 인 액션</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.12.23</td>
+</tr>
+<tr>
+<th>
+<a href="http://jpub.tistory.com/531" >퍼펙트 루비 온 레일즈</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.11.30</td>
+</tr>
+<tr>
+<th>
+<a href="http://jpub.tistory.com/530" >C#으로 배우는 적응형 코드: 디자인 패턴과 SOLID 원칙 기반의 애자일 코딩</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2015.11.30</td>
+</tr>
+</table></div></div>
+					</div><!-- close article -->
+	<!-- 태그트레일 -->
+					
+						<div class="tagTrail"><div class="wrapper"><span class="tagText">TAG</span><a href="/tag/java"  rel="tag">java</a>,
+<a href="/tag/MVC"  rel="tag">MVC</a>,
+<a href="/tag/Spring%204"  rel="tag">Spring 4</a>,
+<a href="/tag/t4"  rel="tag">t4</a>,
+<a href="/tag/스프링%20부트"  rel="tag">스프링 부트</a>,
+<a href="/tag/스프링%20시큐리티"  rel="tag">스프링 시큐리티</a>,
+<a href="/tag/애너테이셔"  rel="tag">애너테이셔</a>,
+<a href="/tag/애스펙트%20지향"  rel="tag">애스펙트 지향</a>,
+<a href="/tag/와이어링"  rel="tag">와이어링</a>,
+<a href="/tag/웹%20프로"  rel="tag">웹 프로</a>,
+<a href="/tag/자바"  rel="tag">자바</a>,
+<a href="/tag/제이펍"  rel="tag">제이펍</a>,
+<a href="/tag/크레이그%20월즈"  rel="tag">크레이그 월즈</a></div></div><!-- close tagTrail -->
+					
+					<div class="actionTrail">
+							<a href="#tb" onclick="toggleLayerForEntry(539, 'trackback'); return false" class="tb"><span id="trackbackCount539">Trackback <span class="cnt">0</span></span></a>
+							<a href="#rp" onclick="toggleLayerForEntry('539', 'comment'); return false" class="cm"><span id="commentCount539">Comment <span class="cnt">0</span></span></a>
+					</div>
+	<!-- 트랙백 -->
+					<div id="entry539Trackback" style="display:none">
+						<div class="trackback">
+							<div class="trackbackadd"><h3><b>TRACKBACK</b></h3></div>
+							
+						</div><!-- close trackback -->
+					</div>
+					<div id="entry539Comment" style="display:block">
+						<div class="comment">
+							<h3>댓글을 달아 주세요 </h3>
+	<!-- 댓글읽기 -->
+							<div class="commentList">
+								
+							</div><!-- close commentList -->
+	<!-- 댓글쓰기 -->
+							<form method="post" action="/comment/add/539" onsubmit="return false" style="margin: 0">
+								<div class="commentWrite">
+									
+										
+											<p class="name">
+												<input type="text" name="name" value="" class="text" id="name" />
+												<label for="name" class="hide">Name</label>
+											</p>
+											<p class="password">
+												<input type="password" maxlength="8" name="password" value="" class="text" id="password" />
+												<label for="password" class="hide">Password</label>
+											</p>
+											<p class="homepage">
+												<input type="text" name="homepage" value="http://" class="text" id="homepage" />
+												<label for="homepage" class="hide">Homepage</label>
+											</p>
+										
+										<p class="secretWrap">
+											<input type="checkbox" name="secret" class="checkbox" />
+											<label for="secret"> secret</label>
+										</p>
+									
+									<p class="textarea">
+										<textarea name="comment" rows="10" cols="50"></textarea>
+									</p>
+									<p class="button"><input type="submit" value="confirm" onclick="addComment(this, 539); return false;" class="submit" /></p>
+								</div><!-- close commentWrite -->
+							</form>
+						</div><!-- close comment -->
+					</div><script type="text/javascript">loadedComments[539]=true;highlight()</script>
+				</div><!-- close entry -->
+			
+	<!-- 페이지 -->
+			
+				<div id="paging">
+					<a href='/540' class="" id="prevPage" title="이전 페이지"><span>&lt;</span>PREV</a>
+					<span class="numbox">
+						
+						<a href='/658' class="num"><span>1</span></a>
+						 <span class="interword">...</span> 
+						<a href='/543' class="num"><span>112</span></a>
+						
+						<a href='/542' class="num"><span>113</span></a>
+						
+						<a href='/541' class="num"><span>114</span></a>
+						
+						<a href='/540' class="num"><span>115</span></a>
+						
+						<a  class="num"><span class="selected" >116</span></a>
+						
+						<a href='/538' class="num"><span>117</span></a>
+						
+						<a href='/537' class="num"><span>118</span></a>
+						
+						<a href='/536' class="num"><span>119</span></a>
+						
+						<a href='/535' class="num"><span>120</span></a>
+						 <span class="interword">...</span> 
+						<a href='/2' class="num"><span>641</span></a>
+						
+					</span>
+					<a href='/538' class="" id="nextPage" title="다음 페이지">NEXT<span>&gt;</span></a>
+				</div>
+			
+		</div><!-- close wrapper-content -->
+	</div><!-- close content -->
+	<hr />
+	<div id="sidebar-middle">
+		
+<!-- 검색 모듈 -->
+				<div id="searchBox">
+					
+						<input type="text" name="search" value="" onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }" class="text" />
+						<input value="검색" type="button" onclick="try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){}" class="submit" />
+					
+				</div>
+			
+<!-- 카테고리 모듈 -->
+				<div id="category" class="module">
+					<h3>Category</h3>
+					<ul class="tt_category">
+	<li class="">
+		<a class="link_tit" href="/category">
+			제이펍의 책 이야기							<span class="c_cnt">(641)</span>
+			
+							<img src="//i1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/image/category/new_ico_5.gif" alt="N" style='vertical-align:middle;padding-left:2px;' />
+					</a>
+
+				<ul class="category_list">
+							<li class="">
+					<a class="link_item" href="/category/제이펍의%20도서">
+						제이펍의 도서													<span class="c_cnt">(178)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/제이펍의%20전자책">
+						제이펍의 전자책													<span class="c_cnt">(1)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/따끈따끈%20뉴스">
+						따끈따끈 뉴스													<span class="c_cnt">(22)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/출판사%20항해기">
+						출판사 항해기													<span class="c_cnt">(30)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/출간전%20책소식">
+						출간전 책소식													<span class="c_cnt">(190)</span>
+						
+													<img src="//i1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/image/category/new_ico_5.gif" alt="N" style='vertical-align:middle;padding-left:2px;' />
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/저역자%20이야기">
+						저역자 이야기													<span class="c_cnt">(2)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/출간후%20이야기">
+						출간후 이야기													<span class="c_cnt">(14)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/오탈자%20정보">
+						오탈자 정보													<span class="c_cnt">(99)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/이벤트%20안내">
+						이벤트 안내													<span class="c_cnt">(49)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/서평">
+						서평													<span class="c_cnt">(9)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/글로벌%20네트워크">
+						글로벌 네트워크													<span class="c_cnt">(41)</span>
+						
+											</a>
+
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="/category/다함께%20프로그래밍">
+						다함께 프로그래밍													<span class="c_cnt">(6)</span>
+						
+											</a>
+
+					
+				</li>
+					</ul>
+			</li>
+</ul>
+
+				</div>
+			
+<!-- 공지사항 모듈 -->
+				
+					<div id="notice" class="module">
+						<h3>Notice</h3>
+						<ul>
+							
+								<li><a href="/notice/631">제이펍 베타리더스 5기를 모집합니다!</a> </li>
+							
+								<li><a href="/notice/560">제이펍 베타리더스 4기를 모집합니다!</a> </li>
+							
+								<li><a href="/notice/499">제이펍 베타리더스 3기를 모집합니다!</a> </li>
+							
+								<li><a href="/notice/496">직원(경력 및 신입)을 모집합니다.</a> </li>
+							
+								<li><a href="/notice/438">제이펍 베타리더스 2기를 모집합니다!</a> </li>
+							
+						</ul>
+					</div>
+				
+			<div class='module module_plugin'><a href="http://jpub.tistory.com/651" ><img src="http://image.yes24.com/momo/TopCate1033/MidCate002/103214560.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/648" ><img src="http://image.yes24.com/momo/TopCate1027/MidCate004/102632050.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/640" ><img src="http://image.yes24.com/momo/TopCate988/MidCate007/98767163.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/639" ><img src="http://image.yes24.com/momo/TopCate988/MidCate007/98767956(1).jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/638" ><img src="http://image.yes24.com/momo/TopCate987/MidCate006/98657912.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/636" ><img src="http://image.yes24.com/momo/TopCate987/MidCate005/98645280.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/634" ><img src="http://image.yes24.com/momo/TopCate985/MidCate006/98456703.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/633" ><img src="http://image.yes24.com/momo/TopCate983/MidCate006/98258723.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/632" ><img src="http://image.yes24.com/momo/TopCate984/MidCate002/98311672.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/625" ><img src="http://image.yes24.com/momo/TopCate980/MidCate009/97983132.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/617" ><img src="http://image.yes24.com/momo/TopCate955/MidCate001/95405832.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/613" ><img src="http://image.yes24.com/momo/TopCate953/MidCate006/95252659(1).jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/609" ><img src="http://image.yes24.com/momo/TopCate946/MidCate004/94538072.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/608" ><img src="http://image.yes24.com/momo/TopCate902/MidCate001/90109477.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/603" ><img src="http://image.yes24.com/momo/TopCate885/MidCate006/88451361.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/601" ><img src="http://image.yes24.com/momo/TopCate877/MidCate010/87690364.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/596" ><img src="http://image.yes24.com/momo/TopCate858/MidCate007/85762990.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/595" ><img src="http://image.yes24.com/momo/TopCate859/MidCate004/85787048.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/587" ><img src="http://image.yes24.com/momo/TopCate846/MidCate009/84588128.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/585" ><img src="http://image.yes24.com/momo/TopCate823/MidCate006/82252428.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/583" ><img src="http://image.yes24.com/momo/TopCate816/MidCate008/81575949.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/578" ><img src="http://image.yes24.com/momo/TopCate809/MidCate003/80589724.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/574" ><img src="http://image.yes24.com/momo/TopCate790/MidCate005/78947093.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/571" ><img src="http://image.yes24.com/momo/TopCate764/MidCate002/76310848.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/569" ><img src="http://image.yes24.com/momo/TopCate763/MidCate002/76213015.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/566" ><img src="http://image.yes24.com/momo/TopCate754/MidCate003/75325129.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/563" ><img src="http://image.yes24.com/momo/TopCate750/MidCate008/74977323.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/554" ><img src="http://image.yes24.com/momo/TopCate712/MidCate003/71127081(1).jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/553" ><img src="http://image.yes24.com/momo/TopCate711/MidCate003/71024708.jpg" /></a></div>
+<!-- 달력 모듈 -->
+				<div id="calendar" class="module">
+					<h3>Calendar</h3>
+					
+					<table class="tt-calendar" cellpadding="0" cellspacing="4" style="width: 100%; table-layout: fixed">
+						<caption class="cal_month">
+							<a href="/archive/201701" title="1개월 앞의 달력을 보여줍니다." class="prev-month">&laquo;</a>
+							<a href="/archive/201703" title="1개월 뒤의 달력을 보여줍니다." class="next-month">&raquo;</a>
+							<a href="/archive/201702" title="현재 달의 달력을 보여줍니다." class="this-month">2017.02</a>
+						</caption>
+						
+						<thead>
+							<tr>
+								
+								<th class="cal_week2">일</th>
+								
+								<th class="cal_week1">월</th>
+								
+								<th class="cal_week1">화</th>
+								
+								<th class="cal_week1">수</th>
+								
+								<th class="cal_week1">목</th>
+								
+								<th class="cal_week1">금</th>
+								
+								<th class="cal_week1">토</th>
+								
+							</tr>
+						</thead>
+						
+						
+						<tbody>
+							
+							<tr class="cal_week">
+								
+								<td class="cal_day1">&nbsp;</td>
+								
+								<td class="cal_day1">&nbsp;</td>
+								
+								<td class="cal_day1">&nbsp;</td>
+								
+								<td class="cal_day cal_day3">1</td>
+								
+								<td class="cal_day cal_day3">2</td>
+								
+								<td class="cal_day cal_day3">3</td>
+								
+								<td class="cal_day cal_day3">4</td>
+								
+							</tr>
+							
+							<tr class="cal_week">
+								
+								<td class="cal_day cal_day3 cal_day_sunday">5</td>
+								
+								<td class="cal_day cal_day3">6</td>
+								
+								<td class="cal_day cal_day3">7</td>
+								
+								<td class="cal_day cal_day3">8</td>
+								
+								<td class="cal_day cal_day3"><a class="cal_click" href="/archive/20170209">9</a></td>
+								
+								<td class="cal_day cal_day3">10</td>
+								
+								<td class="cal_day cal_day3">11</td>
+								
+							</tr>
+							
+							<tr class="cal_week">
+								
+								<td class="cal_day cal_day3 cal_day_sunday">12</td>
+								
+								<td class="cal_day cal_day3">13</td>
+								
+								<td class="cal_day cal_day3">14</td>
+								
+								<td class="cal_day cal_day3">15</td>
+								
+								<td class="cal_day cal_day3">16</td>
+								
+								<td class="cal_day cal_day3"><a class="cal_click" href="/archive/20170217">17</a></td>
+								
+								<td class="cal_day cal_day3">18</td>
+								
+							</tr>
+							
+							<tr class="cal_week cal_current_week">
+								
+								<td class="cal_day cal_day3 cal_day_sunday">19</td>
+								
+								<td class="cal_day cal_day3">20</td>
+								
+								<td class="cal_day cal_day4">21</td>
+								
+								<td class="cal_day cal_day3">22</td>
+								
+								<td class="cal_day cal_day3">23</td>
+								
+								<td class="cal_day cal_day3">24</td>
+								
+								<td class="cal_day cal_day3">25</td>
+								
+							</tr>
+							
+							<tr class="cal_week">
+								
+								<td class="cal_day cal_day3 cal_day_sunday">26</td>
+								
+								<td class="cal_day cal_day3">27</td>
+								
+								<td class="cal_day cal_day3">28</td>
+								
+								<td class="cal_day2">&nbsp;</td>
+								
+								<td class="cal_day2">&nbsp;</td>
+								
+								<td class="cal_day2">&nbsp;</td>
+								
+								<td class="cal_day2">&nbsp;</td>
+								
+							</tr>
+							
+						</tbody>
+						
+					</table>
+					
+				</div>
+			
+<!-- 카운터 모듈 -->
+				<div id="counter" class="module">
+					<div class="total"><span>Total</span>1,096,600</div>
+					<div class="today"><span>Today</span>513</div>
+					<div class="yesterday"><span>Yesterday</span>1,213</div>
+				</div>
+			
+<!-- RSS 링크 -->
+				<div id="btnRSS" class="module">
+					<a href="http://jpub.tistory.com/rss" onclick="window.open(this.href); return false">RSS 링크</a>
+				</div>
+			
+	</div><!-- close sidebar-middle -->
+	<div id="sidebar-right">
+		
+<!-- 블로그 이미지 모듈 -->
+				<div id="blogImage"><img src="http://cfile10.uf.tistory.com/image/125F8E304C4EA16822208B" alt="블로그 이미지" /></div>
+			<div class='module module_plugin'><a href="https://www.facebook.com/jeipub" ><img src="http://cfile27.uf.tistory.com/image/2548405053183D8A22EE73" /></a></div>
+<!-- 블로그 설명 모듈 -->
+				<div id="userID">제이펍</div>
+				<div id="blogDesc" class="module"></div>
+			
+<!-- 최근 포스트 모듈 -->
+				<div id="recentPost" class="module">
+					<h3>Recent Post</h3>
+					<ul>
+						
+							<li>
+								<a href="/658">아주 쉬운 자바스크립트 입문서!.</a>
+								<span class="cnt"><span id="commentCountOnRecentEntries658"></span></span>
+							</li>
+						
+
+							<li>
+								<a href="/657">2017년 1월 서평 이벤트 결과.</a>
+								<span class="cnt"><span id="commentCountOnRecentEntries657">(2)</span></span>
+							</li>
+						
+
+							<li>
+								<a href="/656">[딥러닝 제대로 시작하기]_오...</a>
+								<span class="cnt"><span id="commentCountOnRecentEntries656"></span></span>
+							</li>
+						
+
+							<li>
+								<a href="/655">[그림으로 공부하는 사물인터...</a>
+								<span class="cnt"><span id="commentCountOnRecentEntries655"></span></span>
+							</li>
+						
+
+							<li>
+								<a href="/654">[자바스크립트와 Node.js를 이...</a>
+								<span class="cnt"><span id="commentCountOnRecentEntries654"></span></span>
+							</li>
+						
+					</ul>
+				</div>
+			
+<!-- 최근 댓글 모듈 -->
+				<div id="recentComment" class="module">
+					<h3>Recent Comment</h3>
+					<ul id="recentComments">
+						
+							<li>
+								<a href="/657#comment12411725">수정하였습니다. 감사합니다...</a>
+								<span class="info">
+									<span class="name">레몬에이드</span>
+									<span class="date">02.17</span>
+								</span>
+							</li>
+						
+
+							<li>
+								<a href="/657#comment12409945">2016년 1월 서평 이벤트 결과...</a>
+								<span class="info">
+									<span class="name">한홍근</span>
+									<span class="date">02.15</span>
+								</span>
+							</li>
+						
+
+							<li>
+								<a href="/464#comment12401402">독자님, 안녕하세요. 
+오류가...</a>
+								<span class="info">
+									<span class="name">제이펍</span>
+									<span class="date">02.01</span>
+								</span>
+							</li>
+						
+
+							<li>
+								<a href="/464#comment12400606">1쇄 66쪽/&lt;디지털 데이터의 입...</a>
+								<span class="info">
+									<span class="name">아르퀴메데스</span>
+									<span class="date">01.30</span>
+								</span>
+							</li>
+						
+
+							<li>
+								<a href="/650#comment12394142">원서오탈자인듯 보이네요 
+위...</a>
+								<span class="info">
+									<span class="name">역자</span>
+									<span class="date">01.20</span>
+								</span>
+							</li>
+						
+					</ul>
+				</div>
+			
+<!-- 최근 트랙백 모듈 -->
+				<div id="recentTrackback" class="module">
+					<h3>Recent Trackback</h3>
+					<ul>
+						
+							<li>
+								<a href="/366#trackback2418592">&lt;이미테이션 게임&gt; 그리...</a>
+								<span class="info">
+									<span class="name">철학도가 읽은 세계</span>
+									<span class="date">2015</span>
+								</span>
+							</li>
+						
+							<li>
+								<a href="/408#trackback2220745">오픈소스로 혁신하라.</a>
+								<span class="info">
+									<span class="name">자유광장</span>
+									<span class="date">2014</span>
+								</span>
+							</li>
+						
+							<li>
+								<a href="/351#trackback1784774">안드로이드 4.4 킷캣 에뮬레이...</a>
+								<span class="info">
+									<span class="name">양태호</span>
+									<span class="date">2014</span>
+								</span>
+							</li>
+						
+							<li>
+								<a href="/393#trackback1783808">아마존 웹서비스 자료.</a>
+								<span class="info">
+									<span class="name">[미디어사역자 이병정]</span>
+									<span class="date">2014</span>
+								</span>
+							</li>
+						
+							<li>
+								<a href="/347#trackback1783803">아마존 웹서비스 자료.</a>
+								<span class="info">
+									<span class="name">[미디어사역자 이병정]</span>
+									<span class="date">2014</span>
+								</span>
+							</li>
+						
+					</ul>
+				</div>
+			
+<!-- 글 보관함 모듈 -->
+				<div id="archive" class="module">
+					<h3>Archive</h3>
+					<ul>
+						
+							<li>
+								<a href="/archive/201702">2017/02</a>
+								<span class="cnt">(2)</span>
+							</li>
+						
+
+							<li>
+								<a href="/archive/201701">2017/01</a>
+								<span class="cnt">(7)</span>
+							</li>
+						
+
+							<li>
+								<a href="/archive/201612">2016/12</a>
+								<span class="cnt">(17)</span>
+							</li>
+						
+
+							<li>
+								<a href="/archive/201611">2016/11</a>
+								<span class="cnt">(10)</span>
+							</li>
+						
+
+							<li>
+								<a href="/archive/201610">2016/10</a>
+								<span class="cnt">(8)</span>
+							</li>
+						
+					</ul>
+				</div>
+			<div class='module module_plugin'><a href="http://jpub.tistory.com/547" ><img src="http://image.yes24.com/momo/TopCate703/MidCate005/70248797.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/548" ><img src="http://image.yes24.com/momo/TopCate703/MidCate005/70248804.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/546" ><img src="http://image.yes24.com/momo/TopCate688/MidCate002/68712828.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/545" ><img src="http://image.yes24.com/momo/TopCate688/MidCate002/68712520.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/540" ><img src="http://image.yes24.com/momo/TopCate677/MidCate005/67642179.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/539" ><img src="http://image.yes24.com/momo/TopCate676/MidCate001/67509460.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/537" ><img src="http://image.yes24.com/momo/TopCate673/MidCate006/67256357.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/531" ><img src="http://image.yes24.com/momo/TopCate665/MidCate004/66435690.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/530" ><img src="http://image.yes24.com/momo/TopCate663/MidCate008/66277983.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/527" ><img src="http://image.yes24.com/momo/TopCate644/MidCate004/64332233.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/526" ><img src="http://image.yes24.com/momo/TopCate644/MidCate004/64332404.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/523" ><img src="http://image.yes24.com/momo/TopCate618/MidCate003/61724603.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/520" ><img src="http://image.yes24.com/momo/TopCate582/MidCate003/58125509.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/518" ><img src="http://image.yes24.com/momo/TopCate570/MidCate006/56957015.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/515" ><img src="http://image.yes24.com/momo/TopCate567/MidCate005/56642947.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/514" ><img src="http://image.yes24.com/momo/TopCate564/MidCate009/56386284.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/511" ><img src="http://image.yes24.com/momo/TopCate560/MidCate010/55995876.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/506" ><img src="http://image.yes24.com/momo/TopCate543/MidCate010/54297651.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/503" ><img src="http://image.yes24.com/momo/TopCate537/MidCate004/53634241.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/501" ><img src="http://image.yes24.com/momo/TopCate518/MidCate001/51705674.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/498" ><img src="http://image.yes24.com/momo/TopCate502/MidCate003/50124567.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/492" ><img src="http://image.yes24.com/momo/TopCate492/MidCate006/49154596.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/487" ><img src="http://image.yes24.com/momo/TopCate487/MidCate001/48607518.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/485" ><img src="http://image.yes24.com/momo/TopCate482/MidCate005/48145791.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/484" ><img src="http://image.yes24.com/momo/TopCate481/MidCate002/48018404.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/482" ><img src="http://image.yes24.com/momo/TopCate479/MidCate008/47875658.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/479" ><img src="http://image.yes24.com/momo/TopCate475/MidCate009/47481779.jpg" /></a></div><div class='module module_plugin'><a href="http://jpub.tistory.com/477" ><img src="http://image.yes24.com/momo/TopCate472/MidCate006/47157495.jpg" /></a></div>
+	</div><!-- close sidebar-right -->
+</div><!-- close main -->
+<hr />
+<div id="footer">
+	<div class="footer-container">
+<!-- 푸터메뉴 -->
+		<div id="footMenu">
+			<!-- 블로그 사용 환경 (설치형/티스토리)에 맞게 아래 주석으로 처리된 메뉴를 활성화 시키시기 바랍니다. -->
+			<a href="/tag">태그</a> :
+			<a href="/media">미디어로그</a> :
+			<a href="/location">지역로그</a> :
+			<!-- <a href="/keylog">키로그</a> : -->
+			<a href="/guestbook">방명록</a> :
+			<a href="/admin">관리자</a> :
+			<a href="/admin/entry/post">글쓰기</a>
+		</div>
+<!-- 카피라이트 -->
+		<div id="copyright">
+			Blog is powered by <a href="http://daum.net" onclick="window.open(this.href); return false">Daum</a> / designed by <a href="http://www.tistory.com">Tistory</a>
+		</div>
+	</div><!-- close footer-container -->
+</div><!-- close footer -->
+
+
+<script id="DragSearchJs" type="text/javascript" src="http://s1.daumcdn.net/img.search/front/js/searchDragSelection.js?nil_ch=tistory" charset="euc-kr"></script>
+<script>
+$("body").bind('copy', function (e) {
+    if (typeof window.getSelection == "undefined") {//IE8 or earlier...
+        event.preventDefault();
+
+        var pagelink = '\n\n 출처: ' + decodeURI(document.location.href),
+            copytext =  window.getSelection() + pagelink;
+
+        if (window.clipboardData) {
+            window.clipboardData.setData('Text', copytext);
+        }
+        return;
+    }
+    var body_element = document.getElementsByTagName('body')[0];
+    var selection = window.getSelection();
+
+    //if the selection is short let's not annoy our users
+    if (("" + selection).length < 30) return;
+
+    //create a div outside of the visible area
+    var newdiv = document.createElement('div');
+    newdiv.style.position = 'absolute';
+    newdiv.style.left = '-99999px';
+    body_element.appendChild(newdiv);
+    newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+    //we need a <pre> tag workaround
+    //otherwise the text inside "pre" loses all the line breaks!
+    if (selection.getRangeAt(0).commonAncestorContainer.nodeName == "PRE") {
+        newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+    }
+
+    newdiv.innerHTML += "<br /><br />출처: <a href='"
+        + document.location.href + "'>"
+        + decodeURI(document.location.href) + "</a> [제이펍의 참 똑똑한 2비트 책 이야기]";
+
+    selection.selectAllChildren(newdiv);
+    window.setTimeout(function () { body_element.removeChild(newdiv); }, 200);
+});
+</script><script> if (!window.jQuery) document.write("<script src=\"http://t1.daumcdn.net/tistory_admin/lib/jquery-1.12.4.min.js\"><\/script>") </script>
+	<script src="//s1.daumcdn.net/cfs.tistory/resource/427c4853708934f8de7c6f704b85e2be78496a4d/blog/plugins/lightbox/assets/js/lightbox.min.js"></script>
+	<script>
+	    lightbox.option({
+			"fadeDuration": 200,
+		    "resizeDuration": 200,
+		    "wrapAround": false,
+			"albumLabel": "%1 / %2",
+			"fitImagesInViewport":true ,
+			"stopEvent": false
+	    })
+	</script><script type="text/javascript">
+var _tiq = 'undefined' !== typeof _tiq ? _tiq : []; // Global Variables
+_tiq.push(["__setParam", "title", "제이펍의 참 똑똑한 2비트 책 이야기 :: 스프링 인 액션(제4판)"]);
+_tiq.push(["__setParam", "svcdomain", "user.tistory.com"]);
+_tiq.push(["__setParam", "category", ""]);
+_tiq.push(["__setParam", "articleno", "539"]);
+_tiq.push(["__setParam", "plink", "http://jpub.tistory.com/539"]);
+_tiq.push(["__setParam", "date", "2015-12-31 16:53:14"]);
+_tiq.push(["__setParam", "author", "jpub"]);
+_tiq.push(["__setParam", "length", "28737"]);
+_tiq.push(["__setParam", "isauthor", "N"]);
+_tiq.push(["__setParam", "ishidden", "1"]);
+_tiq.push(["__setParam", "comments", "0"]);
+_tiq.push(["__setParam", "param1", "0"]);
+_tiq.push(["__setParam", "param2", "e"]);
+_tiq.push(["__setParam", "param3", ""]);
+_tiq.push(["__setParam", "like_ex", "{'serviceId': 'tistory', 'uniqueId': '361051_539', 'serviceCategories': '401,blogId_361051'}"]);
+_tiq.push(["__trackPageview"]);
+(function(d) {
+	var se = d.createElement('script'); se.type = 'text/javascript'; se.async = true;
+	se.src = location.protocol + '//m2.daumcdn.net/tiara/js/td.min.js';
+	var s = d.getElementsByTagName('head')[0]; s.appendChild(se);
+})(document);
+</script>
+<script type="text/javascript">
+var __TiaraObj = __TiaraObj || {}; if ('undefined' === typeof __TiaraObj.startTime) { __TiaraObj.startTime = new Date(); }
+var addEvent = function (evt, fn) { window.addEventListener ? window.addEventListener(evt, fn, false) : window.attachEvent('on' + evt, fn); };
+var ua = navigator.userAgent.toLowerCase(); var isIOS = /iP[ao]d|iPhone/i.test(ua); var contentStat = function() {
+_tiq.push(['__content', 't_content', {
+"c_id":"361051_539", 
+"c_title":"제이펍의 참 똑똑한 2비트 책 이야기 :: 스프링 인 액션(제4판)", 
+"type":"article", 
+"author":"제이펍", 
+"author_id":"341703", 
+"cp":"jpub", 
+"cp_id":"361051", 
+"regdata":"2015-12-31 16:53:14", 
+"plink":"http://jpub.tistory.com/539", 
+"media":"pcweb", 
+"comment_cnt":0, 
+"duration": (new Date()).getTime() - __TiaraObj.startTime.getTime()
+}]); };
+addEvent(isIOS ? "pagehide" : "beforeunload", contentStat);
+</script>
+<script type="text/javascript">window.roosevelt_params_queue = window.roosevelt_params_queue || []; window.roosevelt_params_queue.push({channel_id: "dk", channel_label: "tistory"});</script>
+<script type="text/javascript" src="//adimg.daumcdn.net/rt/dk_bt/roosevelt_dk_bt.js" async></script><script type="text/javascript">if(window.console!=undefined){setTimeout(console.log.bind(console,"%cTISTORY","font:8em Arial;color:#EC6521;font-weight:bold"),0);setTimeout(console.log.bind(console,"%c  나를 표현하는 블로그","font:2em sans-serif;color:#333;"),0);}</script>		<div id="tistorytoolbarid"
+		     style="position:absolute;height:20px;top:4px;right:0px;background-color:transparent;background-image:none;z-index:11;">
+			<div class="tistorytoolbar tt_menubar_login">
+				<div
+					class="tt_menubar_white">
+					<div id="ttMenubarInnerWrap" class="tt_menubar_inner">
+						<div class="tt_menubar_bg_toolbar"></div>
+						<h2 style="display:none;">티스토리 툴바</h2>
+						<div class="tt_menubar_mainmenu"><a
+								class="tt_menubar_link_tit tt_menubar_link_tit_daum tt_menubar_link_tit_eng"
+								href="http://www.daum.net/?nil_ref=tistory"
+								target="_blank">Daum</a></div>
+						<div class="tt_menubar_bg_bar"></div>
+						<div class="tt_menubar_mainmenu"><a class="tt_menubar_link_tit tt_menubar_link_tit_eng"
+						                                    href="http://www.tistory.com">Tistory</a>
+						</div>
+						<div class="tt_menubar_bg_bar"></div>
+						<div class="tt_menubar_logout"><a class="tt_menubar_link_tit"
+														  href="https://www.tistory.com/auth/login">로그인</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</body>
+</html>
