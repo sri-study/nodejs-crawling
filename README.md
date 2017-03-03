@@ -29,10 +29,7 @@
 [자바스크립트와 Node.js를 이용한 웹 크롤링 테크닉](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&orderClick=LEB&barcode=9791185890661)
 
 
-### 스터디 목적
-- 
-
 ### 일정
 - 요일 : 매 주 월요일
-- 시간 : 오후 7시 - 9시3 (2시간)
+- 시간 : 오후 7시 - 9시 (2시간?)
 
