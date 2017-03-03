@@ -1,5 +1,7 @@
 **/node_modules/
 **/*.map
+.vscode
+.idea
 jjp222/**/img/
 jjp222/**/*.html
 jjp222/**/*.json
