@@ -7,7 +7,7 @@
 1. 
  -
 
-### Window setting for Windows
+### Window setting for casperJS
 [참고] https://blog.seotory.com/post/2016/10/start-headless-project-in-window
 
 [요점정리]
