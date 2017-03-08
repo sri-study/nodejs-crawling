@@ -1,18 +1,18 @@
-# ·Î±×ÀÎÀÌ ÇÊ¿äÇÑ À¥»çÀÌÆ® Å©·Ñ¸µ
-### ¿ë¾î Á¤¸®
+# ë¡œê·¸ì¸ì´ í•„ìš”í•œ ì›¹ì‚¬ì´íŠ¸ í¬ë¡¤ë§
+### ìš©ì–´ ì •ë¦¬
 1.
  - 
 
-### ¸ğµâ Á¤¸®
+### ëª¨ë“ˆ ì •ë¦¬
 1. 
  -
 
 ### Window setting for casperJS
-[Âü°í] https://blog.seotory.com/post/2016/10/start-headless-project-in-window
+[ì°¸ê³ ] https://blog.seotory.com/post/2016/10/start-headless-project-in-window
 
-[¿äÁ¡Á¤¸®]
-1. PhantomJS´Â nodeJS ¸ğµâÀÌ ¾Æ´Ï´Ù.
- - npm install phantomjs -g ¸¦ ÇÏ´Â ÀÌÀ¯´Â nodejsÀÇ global command line À» »ç¿ëÇÏ±â À§ÇÔÀÌ´Ù.
-2. casperjs ´Â phantomjs¿Í python¿¡ ÀÇÁ¸¼ºÀ» °¡Áö°í ÀÖ´Ù
- - ±×·¯¹Ç·Î pythonÀ» ¼³Ä¡ÇØ¾ß ÇÑ´Ù. 
- - ÁÖÀÇÇÒ Á¡Àº 2.X ¹öÁ¯À» ¼³Ä¡ÇØ¾ß ÇÑ´Ù´Â Á¡ÀÌ´Ù.
+[ìš”ì ì •ë¦¬] 
+1. PhantomJSëŠ” nodeJS ëª¨ë“ˆì´ ì•„ë‹ˆë‹¤.
+ - npm install phantomjs -g ë¥¼ í•˜ëŠ” ì´ìœ ëŠ” nodejsì˜ global command line ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•¨ì´ë‹¤.
+2. casperjs ëŠ” phantomjsì™€ pythonì— ì˜ì¡´ì„±ì„ ê°€ì§€ê³  ìˆë‹¤
+ - ê·¸ëŸ¬ë¯€ë¡œ pythonì„ ì„¤ì¹˜í•´ì•¼ í•œë‹¤. 
+ - ì£¼ì˜í•  ì ì€ 2.X ë²„ì ¼ì„ ì„¤ì¹˜í•´ì•¼ í•œë‹¤ëŠ” ì ì´ë‹¤.
