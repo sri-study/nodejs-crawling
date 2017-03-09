@@ -1,0 +1,1 @@
+casperjs ./01-phantomjs\shot-tool.js http://saramin.co.kr
