@@ -1,0 +1,12 @@
+{
+  "name": "jp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "casperjs": "^1.1.3",
+    "cheerio-httpcli": "^0.6.11",
+    "request": "^2.79.0",
+    "xml2js": "^0.4.17"
+  }
+}

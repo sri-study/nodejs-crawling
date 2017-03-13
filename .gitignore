@@ -3,5 +3,5 @@
 .vscode
 .idea
 jjp222/**/img/
-jjp222/**/*.html
-jjp222/**/*.json
+jjp222/ch02/**/*.html
+jjp222/ch02/**/*.json

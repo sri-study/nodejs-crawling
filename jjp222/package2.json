@@ -1,0 +1,39 @@
+{
+  "name": "nodejs-crawling",
+  "version": "1.0.0",
+  "description": "book study for nodejs-crawling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot",
+    "build": "NODE_ENV=production webpack --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sri-study/nodejs-crawling.git"
+  },
+  "keywords": [
+    "nodejs",
+    "crawling"
+  ],
+  "author": "jp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sri-study/nodejs-crawling/issues"
+  },
+  "homepage": "https://github.com/sri-study/nodejs-crawling#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "css-loader": "^0.26.2",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}
