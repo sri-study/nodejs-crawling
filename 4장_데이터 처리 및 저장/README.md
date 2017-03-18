@@ -4,6 +4,7 @@ window 10  iconv modules 설치
 On Windows:
 
 Option 1: Install all the required tools and configurations using Microsoft's windows-build-tools using npm install --global --production windows-build-tools from an elevated PowerShell or CMD.exe (run as Administrator). 
+
 Option 2: Install tools and configuration manually:
 
 Visual C++ Build Environment: 
