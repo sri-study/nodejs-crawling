@@ -7,7 +7,7 @@ var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database(DB_PATH);
 
 var BASE_URL = 'http://jpub.tistory.com/category/' + encodeURIComponent('제이펍의 도서');
-var PAGE_NUM = 2; // 기간 관계상 2페이지 까지만
+var PAGE_NUM = 2; // 시간 관계상 2페이지 까지만
 
 var client = require('cheerio-httpcli');
 var fs = require('fs');
