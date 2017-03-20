@@ -1,22 +1,43 @@
 /**
- * Created by Administrator on 2017-03-18.♣♣jung♣♣
+ * Created by Administrator on 2017-03-20.♣♣jung♣♣
  */
-var sqlite3 = require('sqlite3').verbose();
+var BASE_URL = 'http://jpub.tistory.com/category/' + encodeURIComponent('제이펍의 도서');
+var PAGE_NUM = 6;
 
-var db = new sqlite3.Database('test.sqlite');
+var client = require('cheerio-httpcli');
+var fs = require('fs');
+var urlType = require('url');
 
-db.serialize(function () {
-    db.run('CREATE TABLE IF NOT EXISTS items(name, value)');
+var booklist = [];
 
-    var stmt = db.prepare('INSERT INTO items VALUES(?,?)');
-    stmt.run(['Banana', 300]);
-    stmt.run(['Apple', 150]);
-    stmt.run(['Mango', 250]);
-    stmt.finalize();
+scrape(1);
 
-    db.each('SELECT * FROM items', function (err, row) {
-        console.log(row.name + ':' + row.value);
+
+function scrape(page) {
+    if (page > PAGE_NUM) {
+        print();
+        return;
+    }
+
+    var VISIT_URL = BASE_URL + '?page=' + page;
+
+    client.fetch(VISIT_URL, function (err, $, res) {
+        if (err) {console.log('DL error'); return;}
+
+        var tr = $('#searchList > ol > li > span.list > a');
+
+        if (!tr) {console.log('페이지 형식 에러'); return;}
+
+        for (var i = 0; i < tr.length; i++) {
+            var book = tr.eq(i).text();
+            booklist.push(book);
+        }
+        scrape(page+1);
     });
-});
+}
 
-db.close();
+function print() {
+    for (var i in booklist) {
+        console.log(booklist[i]);
+    }
+}
