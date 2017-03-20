@@ -70,39 +70,3 @@ function dbinsert() {
         });
     });
 }
-
-//db.close();
-
-//     db.serialize(_=>{
-//         qurey = 'CREATE TABLE IF NOT EXISTS book(id INTEGER PRIMARY KEY, token TEXT)';
-//         db.run(query);
-
-//         query = 'INSERT INTO book(token) VALUES(?)';
-//         let ins_stmt = db.prepare(query);
-
-//         booklist.forEach((value, index, array) => {
-//             let words = value.split(' ');
-//             //console.log(words);
-//             words.forEach(data=>{
-//                 //console.log(data);
-//                 //ins_stmt.run(data);
-//             });
-//             ins_stmt.run(['data']);
-//         });
-//         ins_stmt.finalize();        
-
-//         console.log('집계 결과');
-
-//         // query = ' SELECT token, COUNT(token) AS cnt '+
-//         //         ' FROM book '+
-//         //         ' GROUP BY token HAVING cnt > 3 '+
-//         //         ' ORDER BY cnt DESC ';
-//         // db.each(query, (err, row) => {
-//         //     // console.log(err);
-//         //     console.log(row.cnt + '회:' + row.token);
-//         // });
-//         // db.each('SELECT * FROM book', (err, row) => {
-//         //     console.log(row.cnt + ' : ' + row.token);
-//         // });
-//     });
-// }
