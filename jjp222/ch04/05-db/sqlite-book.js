@@ -55,7 +55,7 @@ function dbinsert() {
             //console.log(words);
             words.forEach(data=>{
                 //console.log(data);
-                //ins_stmt.run(data);
+                stmt.run(data);
             });
         });
         
