@@ -1,0 +1,9 @@
+{
+  "location": {
+    "first_line": 4,
+    "first_column": 24,
+    "last_line": 4,
+    "last_column": 24
+  },
+  "code": "{\r\n  title: \"Fruits Database\"\r\n  version: 2.13\r\n  items :[\r\n    {name:\"Tomato\" price:3000}\r\n    {name:\"Banana\" price:170}\r\n    {name:\"Apple\" price:210}\r\n    {name:\"strawberry\" price:520}\r\n    {name:\"persimmon\" price:490}\r\n    {name:\"kiwi\" price:320}\r\n  ]\r\n}"
+}
