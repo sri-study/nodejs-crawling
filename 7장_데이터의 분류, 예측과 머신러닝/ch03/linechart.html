@@ -1,0 +1,28 @@
+ <html><head>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    
+    google.load('visualization', '1.1', {packages: ['line']});
+    google.setOnLoadCallback(drawChart);
+    
+    function drawChart() {    
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', '테스트 회차');
+      data.addColumn('number', '영어점수');
+      data.addRows([
+        [1, 30],[2, 50],[3, 43],[4, 60],[5, 77],
+        [8, 70],[9, 80],[10,87],[11,68],[12,60]
+      ]);
+      
+      var options = {
+        width: 800, height: 400
+      };
+      
+      var chart = new google.charts.Line(document.getElementById('chart'));
+      chart.draw(data, options);
+    }
+    
+  </script>
+</head>
+<body><div id="chart"></div></body>
+</html>
