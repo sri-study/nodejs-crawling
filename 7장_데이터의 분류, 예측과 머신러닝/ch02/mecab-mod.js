@@ -26,10 +26,10 @@ module.exports = function() {
 		res = res.replace(/\s+$/, "");
 		var lines = res.split("\n");
 
-		var res = lines.map(function(line) {
+		var result = lines.map(function(line) {
 			return line.replace('\t', ',').split(',');
 		});
 
-		return res;
+		return result;
 	};
 };
