@@ -30,8 +30,6 @@ module.exports = function() {
 			return line.replace('\t', ',').split(',');
 		});
 
-		if (undefined != callback) {
-			callback(res);
-		}
-	}
-}
+		return res;
+	};
+};
