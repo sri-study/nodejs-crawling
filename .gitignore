@@ -5,3 +5,6 @@
 jjp222/**/img/
 jjp222/ch02/**/*.html
 jjp222/ch02/**/*.json
+.jshintrc
+.sublime-project
+.tern-project

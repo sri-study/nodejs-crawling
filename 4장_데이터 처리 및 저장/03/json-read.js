@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2017-03-18.♣♣jung♣♣
- */
 var fs = require('fs');
 
 var json = fs.readFileSync('test.json', 'utf-8');
