@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<h3>Chat Client</h3>
+<div>
+  메시지: 
+  <input id="msg" type="text" value="안녕하세요" size="40">
+  <button id="talk_btn">전송</button>
+</div>
+<hr>
+<div id="log" style="margin:24px;"></div>
+
+<script type="text/javascript">
+
+var api = "/api?";
+$("#talk_btn").onclick = sendMsg;
+
+function sendMsg() {
+
+  var msg = $("#msg").value;
+  var url = api + "msg=" + encodeURIComponent(msg);
+
+  $ajax(url, function(xhr, txt) {
+    $("#msg").value = "";
+    $("#msg").focus();
+
+    var e = JSON.parse(txt);
+    var p_you = document.createElement("p");
+    p_you.innerHTML = "유저 &gt; " + msg + "<hr>";
+
+    var p_bot = document.createElement("p");
+    p_bot.innerHTML = "채팅봇 &gt; " + e["msg"] + "<hr>";
+    p_bot.style.backgroundColor = "#e0f0ff";
+
+    var log = $("#log");
+    log.insertBefore(p_you, log.firstChild);
+    log.insertBefore(p_bot, p_you);
+  });
+}
+
+function $(q) { 
+	return document.querySelector(q); 
+}
+
+function $ajax(url, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        callback(xhr, xhr.responseText);
+      } 
+    }
+  };
+  xhr.send('');
+  return xhr;
+}
+</script>
+</body></html>
