@@ -1,4 +1,4 @@
-var MONGO_DSN = "mongodb://localhost:27017/chat-bot";
+var MONGO_DSN = "mongodb://localhost:27017/chatBot";
 
 var Mecab = require('./mecab-mod.js');
 var mecab = new Mecab();

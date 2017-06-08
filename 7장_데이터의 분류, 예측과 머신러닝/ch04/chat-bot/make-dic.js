@@ -1,5 +1,5 @@
 var FILE_DIC = 'bot-dic.dat';
-var MONGO_DSN = "mongodb://localhost:27017/chat-bot";
+var MONGO_DSN = "mongodb://localhost:27017/chatBot";
 var mongo_db;
 
 var mongo_client = require('mongodb').MongoClient;
@@ -33,14 +33,12 @@ function insertKeywords(collection) {
     if (line.substr(0,1) == ";") continue;
 
     var cells = line.split(",");
-    var key = trim(cells[0]);
-    //var rank = parseInt(trim(cells[1]));
-    var pat = trim(cells[2]);
-    var msg = trim(cells[3]);
+    var key = trim(cells[ 0 ]);
+    var pat = trim(cells[ 1 ]);
+    var msg = trim(cells[ 2 ]);
 
     collection.insert({
       "key": key, 
-//	  "rank": rank, 
       "pattern": pat, 
 	  "msg": msg
     }, function(err, result) {
