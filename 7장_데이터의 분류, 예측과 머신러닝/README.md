@@ -76,3 +76,38 @@
 - 과거 데이터 중 현재에 가까운 데이터에 보다 큰 비중을 주고 과거로 갈수록 웨이트가 적어지게 하는 방법
 - 단기간 예측에 적합
 	예측 값 = 전회 예측치 + alpha * (전회 실적치 - 전회 예측치)
+
+
+## 04 채팅 봇과 대화하기  
+- 문장의 형태소 분석으로 키워드에 반응하는 단순 형태  
+- 대화 사전을 데이터베이스에 미리 준비  
+- 일치하는 패턴에 맞는 문장 검색하여 반응  
+
+### mongodb 설치
+	[mongodb]
+	name=MongoDB Repository
+	baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/3.4/x86_64/
+	gpgcheck=0
+	enabled=1
+	gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
+
+#### yum 설치  
+	yum install -y mongodb-org mongodb-server
+
+
+## 05-06 서포트 벡터 머신으로 문자 인식  
+- 인간과 같은 학습 능력을 컴퓨터가 가지게 하기 위한 연구 중 하나가 다층 퍼셉트론  
+- 입력과 출력 사이에 단계를 두어 어떠한 형태의 레이어 층을 구성하는 형태의 네트워크  
+- 참고 사이트  
+http://www.aistudy.com/neural/multilayer_perceptron.htm  
+https://tykimos.github.io/Keras/2017/01/27/MLP_Layer_Talk/  
+http://untitledtblog.tistory.com/35  
+
+- 한계점으로 인한 해결과정에서 나온 것이 서포트 벡터 머신(SVM)
+- 패턴 인식 기법의 하나로 통계적인 머신러닝 방법
+- 마진을 최대로 만드는 알고리즘을 통해 초평면을 결정
+- 패턴 인식은 특정 패턴들 사이에서 어느 패턴을 인식할지 결정하는 것
+- 초평면 : 패턴 사이의 경계
+- SVM 마진 최대화 알고리즘 : 특정 패턴 사이에서 가장 가까운 패턴들과의 사이의 거리가 최대가 되도록 하는 것이 최선
+- MNIST 의 이미지 데이터 활용 (http://yann.lecun.com/exdb/mnist/)
+- node-svm  모듈로 문자 인식 / 상위의 libsvm 이용해서 정확도 높은 문자 인식
