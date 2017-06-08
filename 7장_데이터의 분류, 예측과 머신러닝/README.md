@@ -84,6 +84,7 @@
 - 일치하는 패턴에 맞는 문장 검색하여 반응  
 
 ### mongodb 설치
+	!# /etc/yum.repos.d/mongodb.repo 파일 저장
 	[mongodb]
 	name=MongoDB Repository
 	baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/3.4/x86_64/
