@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기상정보 그래프</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="temperature-data.js"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1.0', {'packages':['corechart']});
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart () {
+            var data = new google.visualization.arrayToDataTable(tempData);
+
+            var options = {
+                'title': '최고 기온과 최저 기온',
+                'width': 600,
+                'height': 400,
+                'colors': ['blue', 'red'],
+                'pointShape': 'circle',
+                'pointSize': 5
+            };
+
+            var chart = new google.visualization.LineChart(
+                document.getElementById('chart_div')
+            );
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+    <div id="chart_div"></div>
+</body>
+</html>

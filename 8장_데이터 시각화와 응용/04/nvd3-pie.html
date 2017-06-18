@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>원 그래프</title>
+    <link href="./lib/nv.d3.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./lib/d3.v3.js"></script>
+    <script src="./lib/nv.d3.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var sample_data = [
+        {'label':'강동원', 'value':94},
+        {'label':'송중기', 'value':88},
+        {'label':'김수현', 'value':62},
+        {'label':'김우빈', 'value':48},
+        {'label':'유아인', 'value':45},
+        {'label':'이민호', 'value':22}
+    ];
+
+    nv.addGraph( function () {
+        var chart = nv.models.pieChart()
+            .x(function (d) {
+                return d.label + '(' + d.value + ')';
+            })
+            .y(function (d) { return d.value})
+            .title('인기 투표')
+            .showLabels(true)
+            .donutLabelsOutside(true)
+            .padAngle(0.04)
+            .cornerRadius(8)
+            .donut(true);
+
+        d3.select('#chart svg')
+            .style({ 'width': '800px;', 'height': '600px'})
+            .datum(sample_data)
+            .transition().duration(1000)
+            .call(chart);
+
+        d3.select('#chart .nv-pie-title')
+            .style({'font-size': '50px'});
+        return chart;
+    });
+</script>
+<div id="chart">
+    <svg></svg>
+</div>
+</body>
+</html>

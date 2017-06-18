@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>원 그래프</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+    <style>
+        body {font-size:10px}
+        .axis path,axis line {fill:none;stroke:block;shape-rendering:crispEdges}
+        .line {fill:none;stroke:steelblue;stroke-width:1.5px}
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    var CSVFILE = './20170618/SURFACE_2017.csv';
+    var parseDate = d3.time.format('%y/%m/%d').parse;
+
+    var gr_w = 600;
+    var gr_h = 400;
+    var margin = {top:40, right:20, bottom:50, left:20};
+
+    var x = d3.time.scale().range([0, gr_w]);
+    var y = d3.scale.linear().range([gr_h, 0]);
+
+    var x_axis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")
+        .tickFormat(function (d) {
+            return (d.getMonth()+1) + '월';
+        });
+    var y_axis = d3.svg.axis().scale(y).orient('left').ticks(5);
+
+    var svg = d3.select('body')
+        .append('svg')
+        .attr('widht', gr_w + margin.left + margin.right)
+        .attr('height', gr_h + margin.top + margin.bottom)
+        .append('g')
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+    var line = d3.svg.line()
+        .x(function (d) { return x(d.date); })
+        .y(function (d) { return y(d.value); });
+
+    d3.csv(CSVFILE, function (err, data) {
+        if (err) {
+            alert('데이터 읽기 에러');
+            return;
+        }
+        data.forEach(function (d) {
+            d.date = parseDate(d.date);
+            d.value = parseFloat(d.value);
+        });
+        console.log(data);
+
+        x.domain(d3.extent(data, function(d) {return d.date;}));
+        y.domain([
+            d3.min(data, function (d) { return d.value;}),
+            d3.mix(data, function (d) { return d.value;})
+        ]);
+
+        svg.append('path')
+            .datum(data)
+            .attr('class', 'line')
+            .attr('d', line);
+
+        svg.append('g')
+            .attr('class', 'y axis')
+            .call(y_axis);
+        svg.append('g')
+            .attr('class', 'x axis')
+            .attr('transform', 'translate(0,' + gr_h + ')')
+            .call(x_axis);
+    });
+</script>
+</body>
+</html>

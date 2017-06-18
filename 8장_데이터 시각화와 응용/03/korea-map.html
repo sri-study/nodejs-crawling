@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>원 그래프</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v0.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var width = 1024, height = 1024;
+    var svg = d3.select('body')
+        .append('svg')
+        .attr({'width':width, 'height':height});
+
+    d3.json('korea-geo.json', function (err, map) {
+        var geo = map.object['korea-geo'];
+        var map_o = topojson.object(map, geo);
+
+        var projection = d3.geo.mercator()
+            .center([137, 35])
+            .scale(2000)
+            .translate([width / 2, height /2]);
+
+        var path = d3.geo.path()
+            .projection(projection);
+
+        svg.append('path')
+            .datum(map_o)
+            .attr('d', path);
+
+        svg.selcetAll('path').attr('fill', 'green');
+
+        var mesh = topojson.mesh(
+            map, geo,
+            function (a, b) {
+                return a != b;
+            }
+        );
+
+        svg.append('path')
+            .datum(mesh)
+            .attr('d', path)
+            .attr('class', 'boundary');
+
+        svg.selectAll('.place-label')
+            .data(map_o.geometries)
+            .enter()
+            .append('text')
+            .attr('class', function (d) {
+                return 'place-label';
+            })
+            .attr('transform', function (d) {
+                return 'translate(' + path.centroid(d) + ')';
+            })
+            .text(function (d) {
+                var s = d.properties.name_local;
+                if (!s) return;
+                if (s =='서울특별시') return s;
+                else return;
+                return s;
+            });
+    })
+</script>
+</body>
+</html>
