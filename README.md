@@ -26,7 +26,7 @@
 - 과제가 있을경우 리뷰 후 진행 한다.
 
 ### 교재
-[자바스크립트와 Node.js를 이용한 웹 크롤링 테크닉](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&orderClick=LEB&barcode=9791185890661)
+[Vue.js 2 시작하기](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788960777439&orderClick=LEA)
 
 
 ### 일정
